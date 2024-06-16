@@ -1,8 +1,7 @@
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
 # Press the green button in the gutter to run the script.
+from logger import Logger
+
+
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    logger = Logger("pytest_service").get_logger("pytest_service")
+    logger.info("hello: %s", 123)
