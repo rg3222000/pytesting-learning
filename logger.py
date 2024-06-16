@@ -1,11 +1,14 @@
-import logging
 import logging.config
-from config import LOGGING_CONFIG
-logging.config.dictConfig(LOGGING_CONFIG)
+import json
+
+with open('logger_config.json') as f:
+    logger_config = json.load(f)
+
+logging.config.dictConfig(config=logger_config)
 
 
 class Logger:
-    def __init__(self, logger_name: object) -> object:
+    def __init__(self, logger_name) -> None:
         self.logger = logging.getLogger(logger_name)
 
     @staticmethod
