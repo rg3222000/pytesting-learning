@@ -1,3 +1,7 @@
-from dotenv import dotenv_values
+import os
+from dotenv import load_dotenv
 
-config = dotenv_values(".env")
+config = load_dotenv('pytesting.env')
+
+port = os.getenv("PORT")
+host = os.getenv("HOST")

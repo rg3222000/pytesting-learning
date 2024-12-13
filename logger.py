@@ -16,3 +16,5 @@ class Logger:
         logger = Logger(logger_name)
         return logger.logger
     
+
+logger = Logger("pytesting").get_logger("pytesting")
